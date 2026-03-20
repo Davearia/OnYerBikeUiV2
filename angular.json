@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "OnYerBikeUiV2:build:production"
+              "buildTarget": "OnYerBikeUiV2:build:production"
             },
             "development": {
-              "browserTarget": "OnYerBikeUiV2:build:development"
+              "buildTarget": "OnYerBikeUiV2:build:development"
             }
           },
           "defaultConfiguration": "development",
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "OnYerBikeUiV2:build"
+            "buildTarget": "OnYerBikeUiV2:build"
           }
         },
         "test": {
