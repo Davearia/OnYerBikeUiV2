@@ -3,9 +3,10 @@ import { Cart } from 'src/app/models/cart.model';
 import { Router } from "@angular/router";
 
 @Component({
-  selector: 'cart-summary',
-  templateUrl: './cart-summary.component.html',
-  styleUrls: ['./cart-summary.component.css']
+    selector: 'cart-summary',
+    templateUrl: './cart-summary.component.html',
+    styleUrls: ['./cart-summary.component.css'],
+    standalone: false
 })
 export class CartSummaryComponent implements OnInit {
 

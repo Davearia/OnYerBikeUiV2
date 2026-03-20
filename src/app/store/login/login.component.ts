@@ -3,9 +3,10 @@ import { NgForm } from '@angular/forms';
 import { BaseUiComponentComponent } from '../base-ui-component/base-ui-component.component';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css'],
+    standalone: false
 })
 export class LoginComponent extends BaseUiComponentComponent {
   username: string = '';

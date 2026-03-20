@@ -11,9 +11,10 @@ import { Cart } from 'src/app/models/cart.model';
 import { Order } from 'src/app/models/order.model';
 
 @Component({
-  selector: 'app-base-ui-component',
-  templateUrl: './base-ui-component.component.html',
-  styleUrls: ['./base-ui-component.component.css'],
+    selector: 'app-base-ui-component',
+    templateUrl: './base-ui-component.component.html',
+    styleUrls: ['./base-ui-component.component.css'],
+    standalone: false
 })
 export class BaseUiComponentComponent implements OnInit {
   order: Order = new Order(this.cart);

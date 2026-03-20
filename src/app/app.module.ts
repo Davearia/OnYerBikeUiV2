@@ -1,5 +1,5 @@
 // Angular modules
-import { APP_INITIALIZER, NgModule } from '@angular/core';
+import { NgModule, inject, provideAppInitializer } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {
   HttpClient,
@@ -49,6 +49,11 @@ export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
   };
 }
 
+const intializeAppFn = () => {
+  const configService = inject(JsonAppConfigService); 
+  return configService;
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -85,18 +90,7 @@ export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
       provide: AppConfig,
       deps: [HttpClient],
       useExisting: JsonAppConfigService,
-    },
-    {
-      provide: APP_INITIALIZER,
-      multi: true,
-      deps: [JsonAppConfigService],
-      useFactory: initializerFn,
-    },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: ErrorInterceptor,
-      multi: true,
-    },
+    },    
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,

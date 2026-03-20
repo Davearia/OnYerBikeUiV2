@@ -8,9 +8,10 @@ import { Order } from 'src/app/models/order.model';
 import { OrderDetail } from 'src/app/models/order-detail';
 
 @Component({
-  selector: 'app-order-view',
-  templateUrl: './orders.component.html',
-  styleUrls: ['./orders.component.css'],
+    selector: 'app-order-view',
+    templateUrl: './orders.component.html',
+    styleUrls: ['./orders.component.css'],
+    standalone: false
 })
 export class OrdersComponent
   extends BaseUiComponentComponent

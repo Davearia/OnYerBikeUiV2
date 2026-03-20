@@ -3,9 +3,10 @@ import { NgForm } from '@angular/forms';
 import { BaseUiComponentComponent } from '../base-ui-component/base-ui-component.component';
 
 @Component({
-  selector: 'app-checkout',
-  templateUrl: './checkout.component.html',
-  styleUrls: ['./checkout.component.css'],
+    selector: 'app-checkout',
+    templateUrl: './checkout.component.html',
+    styleUrls: ['./checkout.component.css'],
+    standalone: false
 })
 export class CheckoutComponent
   extends BaseUiComponentComponent

@@ -3,9 +3,10 @@ import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/misc/auth.service';
 
 @Component({
-  selector: 'admin',
-  templateUrl: 'admin.component.html',
-  styleUrls: ['admin.component.css'],
+    selector: 'admin',
+    templateUrl: 'admin.component.html',
+    styleUrls: ['admin.component.css'],
+    standalone: false
 })
 export class AdminComponent {
   constructor(private auth: AuthService, private router: Router) {}

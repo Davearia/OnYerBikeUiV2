@@ -7,9 +7,10 @@ import { ProductSubCategory } from 'src/app/models/productSubCategory.model';
 import { BaseUiComponentComponent } from '../../base-ui-component/base-ui-component.component';
 
 @Component({
-  selector: 'app-product-editor',
-  templateUrl: './product-editor.component.html',
-  styleUrls: ['./product-editor.component.css'],
+    selector: 'app-product-editor',
+    templateUrl: './product-editor.component.html',
+    styleUrls: ['./product-editor.component.css'],
+    standalone: false
 })
 export class ProductEditorComponent
   extends BaseUiComponentComponent

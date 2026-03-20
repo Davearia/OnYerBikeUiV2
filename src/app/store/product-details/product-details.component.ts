@@ -4,9 +4,10 @@ import { Product } from 'src/app/models/product.model';
 import { BaseUiComponentComponent } from '../base-ui-component/base-ui-component.component';
 
 @Component({
-  selector: 'app-product-details',
-  templateUrl: './product-details.component.html',
-  styleUrls: ['./product-details.component.css'],
+    selector: 'app-product-details',
+    templateUrl: './product-details.component.html',
+    styleUrls: ['./product-details.component.css'],
+    standalone: false
 })
 export class ProductDetailsComponent
   extends BaseUiComponentComponent

@@ -7,9 +7,10 @@ import { User } from 'src/app/models/user.model';
 import { BaseUiComponentComponent } from '../../base-ui-component/base-ui-component.component';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css'],
+    selector: 'app-user',
+    templateUrl: './user.component.html',
+    styleUrls: ['./user.component.css'],
+    standalone: false
 })
 export class UserComponent extends BaseUiComponentComponent implements OnInit {
   displayedColumns: string[] = [
