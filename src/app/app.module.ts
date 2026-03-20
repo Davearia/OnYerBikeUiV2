@@ -49,11 +49,6 @@ export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
   };
 }
 
-const intializeAppFn = () => {
-  const configService = inject(JsonAppConfigService); 
-  return configService;
-};
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,7 +71,6 @@ const intializeAppFn = () => {
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     ModelModule,
@@ -94,6 +88,11 @@ const intializeAppFn = () => {
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptor,
       multi: true,
     },
     StoreFirstGuard,

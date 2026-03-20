@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import { first, map, Observable } from 'rxjs';
-import { loginUser } from 'src/app/models/LoginUser';
+import { LoginUser } from 'src/app/models/loginUser';
 import { BaseService } from './base.service';
 
 @Injectable()
 export class LoginService extends BaseService {
   authenticate(emailAdress: string, password: string): Observable<string> {
-    var lu = new loginUser();
+    var lu = new LoginUser();
     lu.email = emailAdress;
     lu.password = password;
 
     return this.http
-      .post<loginUser>(this.apiRoot + 'auth/login', loginUser)
+      .post<LoginUser>(this.apiRoot + 'auth/login', LoginUser)
       .pipe(
         map((data) => {
           return data.token;
